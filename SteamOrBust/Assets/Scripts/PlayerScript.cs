@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -25,7 +26,8 @@ public class PlayerScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Portal")
         {
-            msm.Shuffle();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            //  msm.Shuffle();
         }
     }
 }
