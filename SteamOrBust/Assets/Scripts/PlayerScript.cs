@@ -6,10 +6,12 @@ public class PlayerScript : MonoBehaviour
 {
     public Rigidbody2D rb;
     private int speed = 5;
+    public MSM msm;
     // Start is called before the first frame update
     void Start()
     {
        rb=GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -18,5 +20,12 @@ public class PlayerScript : MonoBehaviour
       
             rb.velocity = new Vector2(Input.GetAxis("Horizontal")*speed, Input.GetAxis("Vertical")*speed);
         
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Portal")
+        {
+            msm.Shuffle();
+        }
     }
 }
