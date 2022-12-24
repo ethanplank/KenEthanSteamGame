@@ -29,5 +29,10 @@ public class PlayerScript : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
             //  msm.Shuffle();
         }
+        if (collision.gameObject.tag == "ReturnPortal")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+
+        }
     }
 }
