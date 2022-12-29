@@ -28,4 +28,14 @@ public class WallScript : MonoBehaviour
     {
         gameObject.GetComponent<SpriteRenderer>().color = origColor;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = Color.black;
+
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = origColor;
+
+    }
 }
