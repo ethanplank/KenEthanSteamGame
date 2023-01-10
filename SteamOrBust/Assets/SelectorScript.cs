@@ -67,12 +67,12 @@ public class SelectorScript : MonoBehaviour
                 state = 0;
             }
         }
-    }    
-    private void OnTriggerEnter2D(Collision2D collision)
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            collision.gameObject.GetComponent<SpriteRenderer>().color=Color.white;
-        }
     }
+    //    private void OnTriggerEnter2D(Collision2D collision)
+    //    {
+    //        if (Input.GetMouseButtonDown(0))
+    //        {
+    //            collision.gameObject.GetComponent<SpriteRenderer>().color=Color.white;
+    //        }
+    //    }
 }
